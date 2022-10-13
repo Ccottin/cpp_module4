@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:28:32 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/12 21:01:18 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/13 04:44:56 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include "Animal.hpp"
 
-Animal::Animal(void)
+Animal::Animal(void) : type_("Animal")
 {
 	std::cout << "Default Animal Constructor called" << std::endl;
 }
@@ -32,7 +32,7 @@ Animal::Animal(Animal const & ref)
 
 Animal	&Animal::operator=(Animal const & ref)
 {
-	std::cout << "Operator Constructor called" << std::endl;
+	std::cout << "Operator Constructor Animal called" << std::endl;
 	if (this != &ref)
 		this->type_ = ref.getType();
 	return (*this);
@@ -40,7 +40,7 @@ Animal	&Animal::operator=(Animal const & ref)
 
 Animal::~Animal(void)
 {
-	std::cout << "Destructor Animal called" << std::endl;
+	std::cout << "Destructor Animal called on "<< type_ << std::endl;
 }
 
 void		Animal::setType(std::string type)

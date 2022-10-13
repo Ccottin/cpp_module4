@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:30:23 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/12 21:19:53 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/13 04:44:12 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string>
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class	Cat  : public Animal {
 
@@ -30,7 +31,8 @@ class	Cat  : public Animal {
 	protected :
 	
 	private :
-
+		
+		Brain	*_brain;
 };
 
 #endif

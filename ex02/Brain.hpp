@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:30:23 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/12 21:19:53 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/13 03:17:13 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
 # include <string>
-# include "Animal.hpp"
 
-class	Cat  : public Animal {
+class	Brain {
 
 	public :
 		
-		Cat(void);
-		Cat(Cat const & ref);
-		Cat &operator=(Cat const & ref);
-		virtual ~Cat(void);
-		
-		void	makeSound(void) const;
-	
-	protected :
-	
-	private :
+		Brain(void);
+		Brain(std::string type);
+		Brain(Brain const & ref);
+		Brain &operator=(Brain const & ref);
+		virtual ~Brain(void);
 
+		std::string	getIdea(int index);
+		
+	protected :
+
+	private :
+	
+		std::string	_ideas[100];
 };
 
 #endif
