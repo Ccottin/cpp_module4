@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:28:32 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 04:53:36 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/17 04:13:37 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,7 @@ void		Dog::makeSound(void) const
 	std::cout << "Bark!" << std::endl;
 }
 
-
+std::string const		Dog::getIdea(int index) const
+{
+	return (_brain->getIdea(index));
+}

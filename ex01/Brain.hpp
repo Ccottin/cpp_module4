@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:30:23 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 03:17:13 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/17 04:12:38 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class	Brain {
 		Brain &operator=(Brain const & ref);
 		virtual ~Brain(void);
 
-		std::string	getIdea(int index);
+		std::string		getIdea(int index) const;
 		
 	protected :
 

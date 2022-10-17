@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 02:05:05 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 01:31:40 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/17 03:03:59 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_more_test(void)
 	const Cat * B = new Cat();
 	std::cout << B->getType() << std::endl;;
 	B->makeSound();
-	const Animal * C = A;
+	const Animal * C = B;
 	C->makeSound();
 	delete A;
 	delete B;
@@ -38,11 +38,12 @@ int	main(void)
 		const Animal* meta = new Animal();
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();
+		std::cout << meta->getType() << " " << std::endl;
 		std::cout << j->getType() << " " << std::endl;
 		std::cout << i->getType() << " " << std::endl;
+		meta->makeSound();
 		i->makeSound(); //will output the cat sound!
 		j->makeSound();
-		meta->makeSound();
 	
 		delete meta;
 		delete j;

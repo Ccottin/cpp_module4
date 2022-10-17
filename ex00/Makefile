@@ -18,7 +18,9 @@ CC	= c++
 
 OBJS	= $(SRCS:.cpp=.o)
 
-CFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3
+DEPS	= $(SRCS:.cpp=.d)
+
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3 -MMD
 
 all	:	$(NAME)
 
@@ -30,11 +32,14 @@ $(NAME)	:	$(OBJS)
 
 clean	:
 		rm -rf $(OBJS)
+		rm -rf $(DEPS)
 
 fclean	:	clean
 		rm -rf $(NAME)
 
 re	:	fclean
 		make
+
+-include $(DEPS)
 
 .PHONY	:	all fclean clean re

@@ -18,7 +18,7 @@ Animal::Animal(void)
 {
 	std::cout << "Default Animal Constructor called" << std::endl;
 }
-Animal::Animal(std::string type) : type_(type)
+Animal::Animal(std::string const &type) : type_(type)
 {
 	std::cout << "Animal Constructor called with string type "
 	<< type << std::endl;
@@ -43,12 +43,12 @@ Animal::~Animal(void)
 	std::cout << "Destructor Animal called" << std::endl;
 }
 
-void		Animal::setType(std::string type)
+void		Animal::setType(std::string const & type)
 {
 	type_ = type;
 }
 
-std::string const	Animal::getType(void) const
+std::string const	&Animal::getType(void) const
 {
 	return (type_);
 }

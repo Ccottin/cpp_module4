@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:30:23 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 04:44:12 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/17 04:11:38 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class	Cat  : public Animal {
 		virtual ~Cat(void);
 		
 		void	makeSound(void) const;
+
+		std::string	const	getIdea(int index) const;
 	
 	protected :
 	
