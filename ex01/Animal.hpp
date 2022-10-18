@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:30:23 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 04:12:00 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/19 00:00:49 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class	Animal {
 		Animal &operator=(Animal const & ref);
 		virtual ~Animal(void);
 
-		void			setType(std::string type);
 		std::string const	getType(void) const;
+		void				setType(std::string type);
 		virtual void		makeSound(void) const;
 	
 	protected :
@@ -36,5 +36,8 @@ class	Animal {
 	private :
 	
 };
+
+/* Si on enleve le mot cle virtual, les tests de ft_mandatory  */
+/* prendront la fonction makeSound de Animal et non de cat/dog */
 
 #endif

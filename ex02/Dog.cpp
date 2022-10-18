@@ -6,14 +6,13 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:28:32 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 05:26:42 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/19 01:39:51 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 #include "Dog.hpp"
-#include "Brain.hpp"
 
 Dog::Dog(void) : AAnimal("Dog")
 {
@@ -49,4 +48,7 @@ void		Dog::makeSound(void) const
 	std::cout << "Bark!" << std::endl;
 }
 
-
+std::string const		Dog::getIdea(int index) const
+{
+	return (_brain->getIdea(index));
+}

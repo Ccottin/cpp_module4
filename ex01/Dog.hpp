@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:30:23 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/17 04:13:57 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/18 22:33:01 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	Dog : public Animal {
 		Dog &operator=(Dog const & ref);
 		virtual ~Dog(void);
 		
-		void	makeSound(void) const;
+		void				makeSound(void) const;
 		
 		std::string const	getIdea(int index) const;
 

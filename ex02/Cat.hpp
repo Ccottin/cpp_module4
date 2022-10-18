@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:30:23 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 05:27:18 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/19 01:37:29 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ class	Cat  : public AAnimal {
 		Cat &operator=(Cat const & ref);
 		virtual ~Cat(void);
 		
-		void	makeSound(void) const;
+		void				makeSound(void) const;
+
+		std::string	const	getIdea(int index) const;
 	
 	protected :
 	

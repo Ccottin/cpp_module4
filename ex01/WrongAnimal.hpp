@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:30:23 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/12 21:11:22 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/19 00:04:31 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ class	WrongAnimal {
 		WrongAnimal &operator=(WrongAnimal const & ref);
 		virtual ~WrongAnimal(void);
 
-		void			setType(std::string type);
+		void				setType(std::string type);
 		std::string const	getType(void) const;
-		void			makeSound(void) const;
+		void				makeSound(void) const;
 	
 	protected :
 

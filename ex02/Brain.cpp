@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:28:32 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 04:43:05 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/17 04:12:35 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Brain::Brain(std::string type)
 		case 0 :
 			for (int i = 0; i < 100; i++)
 				_ideas[i] = "I'm not sure if"
-				"I would rather sleep or eat";
+				" I would rather sleep or eat";
 			break ;
 
 		case 1 :
@@ -68,7 +68,7 @@ Brain	&Brain::operator=(Brain const & ref)
 	if (this != &ref)
 	{
 		for (int i = 0; i < 100; i++)
-			this->_ideas[i] = ref._ideas[i];
+			this->_ideas[i] = ref.getIdea(i);
 	}
 	return (*this);
 }
@@ -78,7 +78,12 @@ Brain::~Brain(void)
 	std::cout << "Destructor Brain called" << std::endl;
 }
 
-std::string	Brain::getIdea(int index)
+std::string		Brain::getIdea(int index) const
 {
+	if (index < 0 || index > 99)
+	{
+		std::string const &ret = "Is Brain out of his mind?";
+		return (ret);
+	}
 	return (_ideas[index]);
 }

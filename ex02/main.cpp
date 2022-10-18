@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 02:05:05 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 05:33:33 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/19 01:41:26 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 #include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
 
 void	ft_mandatory(void)
 {
@@ -42,8 +40,7 @@ int	main(void)
 		
 		const	Dog * j = new Dog();
 		const	Cat * i = new Cat();
-		delete j;//should not create a leak
-		delete i;
+		delete j;		delete i;
 
 		std::cout << std::endl;
 
@@ -52,46 +49,20 @@ int	main(void)
 
 		h->makeSound();
 		std::cout << h->getType() << std::endl;
+		std::cout << h->getIdea(42) << std::endl;
 		g->makeSound();
 		std::cout << g->getType() << std::endl;
+		std::cout << g->getIdea(58) << std::endl;
 
 		delete h;
 		delete g;
 	}
 	
-	{
-		std::cout <<  std::endl;
-	//	AAnimal i = Dog();
-	//	AAnimal j = Cat();
-		Dog i = Dog();
-		Cat j = Cat();
-
-		i.makeSound();
-		std::cout << i.getType() << std::endl;
-	//	i = j; cannot work anymore
-		j.makeSound();
-		std::cout << j.getType() << std::endl;
-
-		std::cout <<  std::endl;
-		Dog* h = new Dog();
-		AAnimal* g(new Cat());
-
-		g->makeSound();
-		std::cout << g->getType() << std::endl;
-		delete g;
-		g = (new Dog(*h));
-		g->makeSound();
-		std::cout << g->getType() << std::endl;
-
-		delete h;
-		std::cout <<  std::endl;
-		delete g;
-		std::cout <<  std::endl;
-	}
 	std::cout <<  std::endl;
 	std::cout <<  std::endl;
 	ft_mandatory();
 	std::cout <<  std::endl;
 	std::cout <<  std::endl;
+	
 	return 0;
 }

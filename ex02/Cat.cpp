@@ -6,7 +6,7 @@
 /*   By: ccottin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:28:32 by ccottin           #+#    #+#             */
-/*   Updated: 2022/10/13 05:26:36 by ccottin          ###   ########.fr       */
+/*   Updated: 2022/10/19 01:38:00 by ccottin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,9 @@ Cat::~Cat(void)
 void	Cat::makeSound(void) const
 {
 	std::cout << "Mreow" << std::endl;
+}
+
+std::string	const	Cat::getIdea(int index) const
+{
+	return (_brain->getIdea(index));
 }
